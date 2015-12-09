@@ -44,7 +44,7 @@ deploymentStatusList = (activeJobs, apps) ->
 module.exports =
   formatResponse: (response) ->
     if response.noDeployments()
-      "No deployments for <#{response.repository.url}|#{response.name}>  in #{response.environment}."
+      "No deployments for [#{response.name}](#{response.repository.url})  in #{response.environment}."
     else if response.isUpToDate()
       """
       App #{response.name} is up to date in #{response.environment}.
